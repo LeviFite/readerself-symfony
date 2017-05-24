@@ -1,145 +1,145 @@
-.mdl-layout__header {
+.mdc-layout__header {
     min-height: inherit;
 }
-.mdl-layout__drawer-button {
+.mdc-layout__drawer-button {
     height: auto;
     line-height: 1;
     padding: 7px 5px 7px 5px;
     width: auto;
 }
-.mdl-layout__header-row {
+.mdc-layout__header-row {
     height: auto;
 }
-.mdl-layout__header-row .mdl-button {
+.mdc-layout__header-row .mdc-button {
     margin: 5px 0px 5px 5px;
 }
-.mdl-list__item {
+.mdc-list__item {
     padding: 8px;
 }
-.mdl-list__item a:link, .mdl-list__item a:visited {
+.mdc-list__item a:link, .mdc-list__item a:visited {
     cursor: pointer;
     display: block;
     padding: 8px;
     text-decoration: none;
     width: 100%;
 }
-.mdl-list__item a:hover {
+.mdc-list__item a:hover {
     background-color: #e0e0e0;
 }
-.mdl-grid {
+.mdc-layout-grid {
     width: inherit;
 }
-.mdl-card {
+.mdc-card {
     min-height: inherit;
 }
-.mdl-card[dir="rtl"] {
+.mdc-card[dir="rtl"] {
     text-align: right;
 }
-.mdl-card__title {
+.mdc-card__primary {
     color: #757575;
     display: block;
     padding: 8px;
 }
-.mdl-card__title .mdl-card__title-text {
+.mdc-card__primary .mdc-card__title {
     font-size: 16px;
     margin-bottom: 4px;
 }
-.mdl-card[dir="rtl"] .mdl-card__title .mdl-card__title-text {
+.mdc-card[dir="rtl"] .mdc-card__primary .mdc-card__title {
     display: block;
     text-align: right;
 }
-.mdl-card .mdl-card__actions {
+.mdc-card .mdc-card__actions {
     text-align: right;
 }
-.mdl-button {
+.mdc-button {
     padding: 0px 8px;
     min-width: inherit;
 }
-.mdl-button:focus:not(:active) {
+.mdc-button:focus:not(:active) {
     background-color: transparent;
 }
-.mdl-card__supporting-text {
+.mdc-card__supporting-text {
     padding: 0px 8px 8px 8px;
     width: auto;
 }
-.mdl-card .mdl-navigation__link {
+.mdc-card .mdc-navigation__link {
     float: left;
     font-weight: inherit;
     line-height: 1;
     margin: 4px 4px 4px 0px;
     white-space: nowrap;
 }
-.mdl-card[dir="rtl"] .mdl-navigation__link {
+.mdc-card[dir="rtl"] .mdc-navigation__link {
     float: right;
     margin: 4px 0px 4px 4px;
 }
-.mdl-menu__item {
+.mdc-menu__item {
     height: 16px;
     line-height: 16px;
     padding: 8px 4px;
 }
-.mdl-menu__item a:link, .mdl-menu__item a:visited {
+.mdc-menu__item a:link, .mdc-menu__item a:visited {
     text-decoration: none;
 }
-.mdl-card__supporting-text h1 {
+.mdc-card__supporting-text h1 {
     font-size: 17px;
     line-height: 1;
     margin: 15px 0px;
 }
-.mdl-card__supporting-text h2 {
+.mdc-card__supporting-text h2 {
     font-size: 16px;
     line-height: 1;
     margin: 10px 0px;
 }
-.mdl-card__supporting-text h3 {
+.mdc-card__supporting-text h3 {
     font-size: 15px;
     line-height: 1;
     margin: 10px 0px;
 }
-.mdl-card__supporting-text h4 {
+.mdc-card__supporting-text h4 {
     font-size: 14px;
     line-height: 1;
     margin: 10px 0px;
 }
-.mdl-card__supporting-text h5 {
+.mdc-card__supporting-text h5 {
     font-size: 13px;
     line-height: 1;
     margin: 10px 0px;
 }
-.mdl-card__supporting-text h6 {
+.mdc-card__supporting-text h6 {
     font-size: 12px;
     line-height: 1;
     margin: 10px 0px;
 }
-.mdl-card__supporting-text p {
+.mdc-card__supporting-text p {
     clear: both;
     line-height: 1.5;
     margin: 5px 0px;
 }
-.mdl-card__supporting-text em {
+.mdc-card__supporting-text em {
     font-style: italic;
 }
-.mdl-card__supporting-text strong {
+.mdc-card__supporting-text strong {
     font-weight: bold;
 }
-.mdl-card__supporting-text blockquote {
+.mdc-card__supporting-text blockquote {
     -webkit-margin-start: 10px;
     font-size: inherit;
 }
-.mdl-card__supporting-text blockquote:before {
+.mdc-card__supporting-text blockquote:before {
     content: none;
 }
-.mdl-card__supporting-text blockquote:after {
+.mdc-card__supporting-text blockquote:after {
     content: none;
 }
-.mdl-dialog__content {
+.mdc-dialog__content {
     padding: 0px;
     text-align: left;
 }
-.mdl-navigation .mdl-button {
+.mdc-navigation .mdc-button {
     overflow: visible;
 }
-.mdl-navigation .mdl-badge[data-badge]:after {
+.mdc-navigation .mdc-badge[data-badge]:after {
     font-size: 11px;
     right: -5px;
     top: -5px;
@@ -151,7 +151,7 @@
     background-size: 13px 13px;
     padding-left: 16px;
 }
-.mdl-card[dir="rtl"] .favicon, .mdl-card[dir="rtl"] a.favicon:link, .mdl-card[dir="rtl"] a.favicon:visited {
+.mdc-card[dir="rtl"] .favicon, .mdc-card[dir="rtl"] a.favicon:link, .mdc-card[dir="rtl"] a.favicon:visited {
     background-position: center right;
     padding-left: 0px;
     padding-right: 16px;
@@ -160,7 +160,7 @@ h1 .favicon, h1.favicon, h1 a.favicon:link, h1 a.favicon:visited {
     background-size: 16px 16px;
     padding-left: 19px;
 }
-.mdl-card[dir="rtl"] h1 .favicon, .mdl-card[dir="rtl"] h1.favicon, .mdl-card[dir="rtl"] h1 a.favicon:link, .mdl-card[dir="rtl"] h1 a.favicon:visited {
+.mdc-card[dir="rtl"] h1 .favicon, .mdc-card[dir="rtl"] h1.favicon, .mdc-card[dir="rtl"] h1 a.favicon:link, .mdc-card[dir="rtl"] h1 a.favicon:visited {
     padding-left: 0px;
     padding-right: 19px;
 }
@@ -170,11 +170,11 @@ h1 .favicon, h1.favicon, h1 a.favicon:link, h1 a.favicon:visited {
     text-rendering: optimizeLegibility;
     vertical-align: middle;
 }
-.mdl-card .material-icons {
+.mdc-card .material-icons {
     font-size: 16px;
     margin-right: 2px;
 }
-.mdl-card[dir="rtl"] .material-icons {
+.mdc-card[dir="rtl"] .material-icons {
     margin-left: 2px;
     margin-right: 0px;
 }
@@ -241,14 +241,14 @@ body.no_entries .action-down, body.no_entries .action-up {
     display: none;
 }
 
-body.collapse .mdl-card__supporting-text {
+body.collapse .mdc-card__supporting-text {
     display: none;
 }
 
-body .mdl-card.collapse .mdl-card__supporting-text {
+body .mdc-card.collapse .mdc-card__supporting-text {
     display: none;
 }
 
-body .mdl-card.expand .mdl-card__supporting-text {
+body .mdc-card.expand .mdc-card__supporting-text {
     display: block;
 }

@@ -1,7 +1,7 @@
 <script type="text/template" id="view-login">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="login">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--6-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="login">
         <form action="#items/unread" data-query="/login" method="POST">
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>
                     <label for="email" class="required">{{trans 'email'}}</label>
                     <input type="email" id="email" name="email" required="required" value="">
@@ -11,27 +11,27 @@
                     <input type="password" id="password" name="password" required="required" value="">
                 </p>
                 <p>
-                    <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white">{{trans 'login'}}</button>
+                    <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white">{{trans 'login'}}</button>
                 </p>
             </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <a href="#forgotpassword" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'forgotpassword'}}</a>
+            <div class="mdc-card__actions mdc-card--border">
+                <a href="#forgotpassword" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'forgotpassword'}}</a>
             </div>
         </form>
     </div>
 </script>
 
 <script type="text/template" id="view-profile">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="profile">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="profile">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 {{ entry.email }}
             </h1>
-            <div class="mdl-card__subtitle-text">
-                <span class="mdl-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
+            <div class="mdc-card__subtitle">
+                <span class="mdc-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
             </div>
         </div>
-        <div class="mdl-card__supporting-text">
+        <div class="mdc-card__supporting-text">
             {{#if entry.nickname }}
             <p>
                 <span class="label">{{trans 'nickname'}}</span>
@@ -39,21 +39,21 @@
             </p>
             {{/if}}
         </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a href="#profile" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'profile'}}</a>
-            <a href="#profile/connections" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'connections'}}</a>
-            <a href="#profile/notifications" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'notifications'}}</a>
+        <div class="mdc-card__actions mdc-card--border">
+            <a href="#profile" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'profile'}}</a>
+            <a href="#profile/connections" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'connections'}}</a>
+            <a href="#profile/notifications" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'notifications'}}</a>
         </div>
     </div>
 
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone online" id="profile-update">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--6-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone online" id="profile-update">
         <form action="#profile" data-query="/profile/update" method="PUT">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                     {{trans 'profile'}}
                 </h1>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>
                     <label for="email" class="required">{{trans 'email'}}</label>
                     <input type="email" id="email" name="email" required="required" value="{{ entry.email }}">
@@ -67,20 +67,20 @@
                     <input type="password" id="passwordConfirm" name="passwordConfirm" value="">
                 </p>
                 <p>
-                    <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white">{{trans 'update'}}</button>
+                    <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white">{{trans 'update'}}</button>
                 </p>
             </div>
         </form>
     </div>
 
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone online" id="profile-pinboard">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--6-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone online" id="profile-pinboard">
         <form action="#profile" data-query="/pinboard" method="POST">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                     Pinboard
                 </h1>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>Go to your <a href="https://pinboard.in/settings/password" target="_blank">settings page</a> on Pinboard to get your API Token.</p>
                 <p>
                     <label for="token" class="required">{{trans 'token'}}</label>
@@ -88,17 +88,17 @@
                 </p>
                 <p>
                     {{#if pinboard }}
-                        <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white">{{trans 'update'}}</button>
+                        <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white">{{trans 'update'}}</button>
                     {{else}}
-                        <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white">{{trans 'add'}}</button>
+                        <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white">{{trans 'add'}}</button>
                     {{/if}}
                 </p>
             </div>
         </form>
         {{#if pinboard }}
-            <div class="mdl-card__actions mdl-card--border">
+            <div class="mdc-card__actions mdc-card--border">
                 <form action="#profile" data-query="/connection/{{ pinboard.id }}" method="DELETE">
-                    <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'delete'}}</button>
+                    <button type="submit" class="mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'delete'}}</button>
                 </form>
             </div>
         {{/if}}
@@ -106,34 +106,34 @@
 </script>
 
 <script type="text/template" id="view-profile-connections">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="profile-connections">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="profile-connections">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 {{ entry.email }}
             </h1>
-            <div class="mdl-card__subtitle-text">
-                <span class="mdl-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
+            <div class="mdc-card__subtitle">
+                <span class="mdc-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
             </div>
         </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a href="#profile" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'profile'}}</a>
-            <a href="#profile/connections" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'connections'}}</a>
-            <a href="#profile/notifications" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'notifications'}}</a>
+        <div class="mdc-card__actions mdc-card--border">
+            <a href="#profile" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'profile'}}</a>
+            <a href="#profile/connections" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'connections'}}</a>
+            <a href="#profile/notifications" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'notifications'}}</a>
         </div>
     </div>
 
     {{#each entries as |connection connection_index|}}
-        <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="connection-{{ connection.id }}">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+        <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--6-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="connection-{{ connection.id }}">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                     {{ connection.type }}
                 </h1>
-                <div class="mdl-card__subtitle-text">
-                    <span class="mdl-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ connection.date_modified }}"></span></span>
-                    <span class="mdl-navigation__link"><i class="material-icons md-16">settings_ethernet</i>{{#if connection.currentIp }}<strong>{{ connection.ip }}</strong>{{else}}{{ connection.ip }}{{/if}}</span>
+                <div class="mdc-card__subtitle">
+                    <span class="mdc-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ connection.date_modified }}"></span></span>
+                    <span class="mdc-navigation__link"><i class="material-icons md-16">settings_ethernet</i>{{#if connection.currentIp }}<strong>{{ connection.ip }}</strong>{{else}}{{ connection.ip }}{{/if}}</span>
                 </div>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>
                     {{#if connection.currentAgent }}
                         <strong>{{ connection.agent }}</strong>
@@ -142,9 +142,9 @@
                     {{/if}}
                 </p>
             </div>
-            <div class="mdl-card__actions mdl-card--border online">
+            <div class="mdc-card__actions mdc-card--border online">
                 <form action="#profile/connections" data-query="/connection/{{ connection.id }}" method="DELETE">
-                    <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'delete'}}</button>
+                    <button type="submit" class="mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'delete'}}</button>
                 </form>
             </div>
         </div>
@@ -152,34 +152,34 @@
 </script>
 
 <script type="text/template" id="view-profile-notifications">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="profile-notifications">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="profile-notifications">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 {{ entry.email }}
             </h1>
-            <div class="mdl-card__subtitle-text">
-                <span class="mdl-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
+            <div class="mdc-card__subtitle">
+                <span class="mdc-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
             </div>
         </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a href="#profile" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'profile'}}</a>
-            <a href="#profile/connections" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'connections'}}</a>
-            <a href="#profile/notifications" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'notifications'}}</a>
+        <div class="mdc-card__actions mdc-card--border">
+            <a href="#profile" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'profile'}}</a>
+            <a href="#profile/connections" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'connections'}}</a>
+            <a href="#profile/notifications" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'notifications'}}</a>
         </div>
     </div>
 
     {{#each entries as |notification notification_index|}}
-        <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="notification-{{ connection.id }}">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+        <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--6-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="notification-{{ connection.id }}">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                     {{ notification.hostname }}
                 </h1>
-                <div class="mdl-card__subtitle-text">
-                    <span class="mdl-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ notification.date_modified }}"></span></span>
-                    <span class="mdl-navigation__link"><i class="material-icons md-16">settings_ethernet</i>{{#if notification.currentIp }}<strong>{{ notification.ip }}</strong>{{else}}{{ notification.ip }}{{/if}}</span>
+                <div class="mdc-card__subtitle">
+                    <span class="mdc-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ notification.date_modified }}"></span></span>
+                    <span class="mdc-navigation__link"><i class="material-icons md-16">settings_ethernet</i>{{#if notification.currentIp }}<strong>{{ notification.ip }}</strong>{{else}}{{ notification.ip }}{{/if}}</span>
                 </div>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>
                     {{#if notification.currentAgent }}
                         <strong>{{ notification.agent }}</strong>
@@ -188,9 +188,9 @@
                     {{/if}}
                 </p>
             </div>
-            <div class="mdl-card__actions mdl-card--border online">
+            <div class="mdc-card__actions mdc-card--border online">
                 <form action="#profile/notifications" data-query="/push/{{ notification.id }}" method="DELETE">
-                    <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'delete'}}</button>
+                    <button type="submit" class="mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'delete'}}</button>
                 </form>
             </div>
         </div>

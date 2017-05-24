@@ -1,45 +1,45 @@
 <script type="text/template" id="view-navigation">
-    <a href="#login" class="load-route anonymous mdl-button mdl-color-text--white">{{trans 'login'}}</a>
+    <a href="#login" class="load-route anonymous mdc-button mdc-color-text--white">{{trans 'login'}}</a>
 
-    <a href="#items/unread" class="load-route count-unread connected mdl-button mdl-color-text--white" title="{{trans 'shortcut_g_then_u'}}">{{trans 'button.unread_items'}}</a>
-    <a href="#" class="action-up mdl-button mdl-color-text--white" title="k">{{trans 'up'}}</a>
-    <a href="#" class="action-down mdl-button mdl-color-text--white" title="j">{{trans 'down'}}</a>
-    <a href="#" class="action-top connected mdl-button mdl-color-text--white" title="k">{{trans 'top'}}</a>
+    <a href="#items/unread" class="load-route count-unread connected mdc-button mdc-color-text--white" title="{{trans 'shortcut_g_then_u'}}">{{trans 'button.unread_items'}}</a>
+    <a href="#" class="action-up mdc-button mdc-color-text--white" title="k">{{trans 'up'}}</a>
+    <a href="#" class="action-down mdc-button mdc-color-text--white" title="j">{{trans 'down'}}</a>
+    <a href="#" class="action-top connected mdc-button mdc-color-text--white" title="k">{{trans 'top'}}</a>
 </script>
 
 <script type="text/template" id="view-aside">
-    <ul class="mdl-list">
-        <li class="mdl-list__item"><a href="#items/recent" class="load-route" title="{{trans 'shortcut_g_then_a'}}">{{trans 'title.recent_items'}}</a></li>
-        <li class="mdl-list__item connected"><a href="#items/starred" class="load-route" title="{{trans 'shortcut_g_then_s'}}">{{trans 'title.starred_items'}}</a></li>
+    <ul class="mdc-list">
+        <li class="mdc-list__item"><a href="#items/recent" class="load-route" title="{{trans 'shortcut_g_then_a'}}">{{trans 'title.recent_items'}}</a></li>
+        <li class="mdc-list__item connected"><a href="#items/starred" class="load-route" title="{{trans 'shortcut_g_then_s'}}">{{trans 'title.starred_items'}}</a></li>
 
-        <li class="mdl-list__item"><a href="#feeds/recent" class="load-route">{{trans 'title.recent_feeds'}}</a></li>
-        <li class="mdl-list__item connected"><a href="#feeds/subscribed" class="load-route">{{trans 'title.subscribed_feeds'}}</a></li>
-        <li class="mdl-list__item connected"><a href="#feeds/witherrors" class="load-route">{{trans 'title.feeds_witherrors'}}</a></li>
+        <li class="mdc-list__item"><a href="#feeds/recent" class="load-route">{{trans 'title.recent_feeds'}}</a></li>
+        <li class="mdc-list__item connected"><a href="#feeds/subscribed" class="load-route">{{trans 'title.subscribed_feeds'}}</a></li>
+        <li class="mdc-list__item connected"><a href="#feeds/witherrors" class="load-route">{{trans 'title.feeds_witherrors'}}</a></li>
 
-        <li class="mdl-list__item"><a href="#categories/trendy" class="load-route">{{trans 'title.trendy_categories'}}</a></li>
+        <li class="mdc-list__item"><a href="#categories/trendy" class="load-route">{{trans 'title.trendy_categories'}}</a></li>
 
-        <li class="mdl-list__item"><a href="#authors/trendy" class="load-route">{{trans 'title.trendy_authors'}}</a></li>
+        <li class="mdc-list__item"><a href="#authors/trendy" class="load-route">{{trans 'title.trendy_authors'}}</a></li>
 
-        <li class="mdl-list__item connected"><a href="#profile" class="load-route">{{trans 'profile'}}</a>
-        <li class="mdl-list__item connected administrator"><a href="#status" class="load-route">{{trans 'status'}}</a>
-        <li class="mdl-list__item connected"><a href="#logout" class="load-route">{{trans 'logout'}}</a>
+        <li class="mdc-list__item connected"><a href="#profile" class="load-route">{{trans 'profile'}}</a>
+        <li class="mdc-list__item connected administrator"><a href="#status" class="load-route">{{trans 'status'}}</a>
+        <li class="mdc-list__item connected"><a href="#logout" class="load-route">{{trans 'logout'}}</a>
     </ul>
 </script>
 
 <script type="text/template" id="view-401">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="error-401">
-        <div class="mdl-card__supporting-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--6-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="error-401">
+        <div class="mdc-card__supporting-text">
             <p>
-                <a href="#login" class="load-route mdl-button mdl-color--pink mdl-color-text--white">{{trans 'login'}}</a>
+                <a href="#login" class="load-route mdc-button mdc-color--pink mdc-color-text--white">{{trans 'login'}}</a>
             </p>
         </div>
     </div>
 </script>
 
 <script type="text/template" id="view-404">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="error-404">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--6-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="error-404">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 404
             </h1>
         </div>
@@ -47,9 +47,9 @@
 </script>
 
 <script type="text/template" id="view-500">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="error-500">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--6-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="error-500">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 500
             </h1>
         </div>
@@ -58,19 +58,19 @@
 
 <script type="text/template" id="view-more">
     {{#if entries_page_next }}
-        <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col more" id="page-{{ entries_page_next }}">
-            <div class="mdl-card__actions mdl-card--border">
-                <a href="{{ current_key }}" data-page="{{ entries_page_next }}" data-q="{{ current_q }}" class="load-route more mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'more'}}</a>
+        <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12 more" id="page-{{ entries_page_next }}">
+            <div class="mdc-card__actions mdc-card--border">
+                <a href="{{ current_key }}" data-page="{{ entries_page_next }}" data-q="{{ current_q }}" class="load-route more mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'more'}}</a>
             </div>
         </div>
     {{/if}}
 </script>
 
 <script type="text/template" id="view-search-feeds">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="search-feeds">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="search-feeds">
         <form action="#feeds/search/result" method="GET" id="form-search-feeds">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                 {{#if entries_total }}
                     {{trans 'title.search_feeds'}} ({{ entries_total }})
                 {{else}}
@@ -78,31 +78,31 @@
                 {{/if}}
                 </h1>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>
                     <label for="q" class="required">{{trans 'q'}}</label>
                     <input type="text" id="q" name="q" required="required" value="{{#if current_q }}{{ current_q }}{{/if}}">
                 </p>
                 <p>
-                    <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white">{{trans 'search'}}</button>
+                    <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white">{{trans 'search'}}</button>
                 </p>
             </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <a href="#feeds/recent" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'button.recent_feeds'}}</a>
-                <a href="#feeds/subscribed" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.subscribed_feeds'}}</a>
-                <a href="#feeds/unsubscribed" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.unsubscribed_feeds'}}</a>
-                <a href="#feeds/witherrors" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.feeds_witherrors'}}</a>
-                <a href="#feeds/search" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect online">{{trans 'button.search_feeds'}}</a>
+            <div class="mdc-card__actions mdc-card--border">
+                <a href="#feeds/recent" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'button.recent_feeds'}}</a>
+                <a href="#feeds/subscribed" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.subscribed_feeds'}}</a>
+                <a href="#feeds/unsubscribed" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.unsubscribed_feeds'}}</a>
+                <a href="#feeds/witherrors" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.feeds_witherrors'}}</a>
+                <a href="#feeds/search" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect online">{{trans 'button.search_feeds'}}</a>
             </div>
         </form>
     </div>
 </script>
 
 <script type="text/template" id="view-search-categories">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="search-categories">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="search-categories">
         <form action="#categories/search/result" method="GET" id="form-search-categories">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                 {{#if entries_total }}
                     {{trans 'title.search_categories'}} ({{ entries_total }})
                 {{else}}
@@ -110,30 +110,30 @@
                 {{/if}}
                 </h1>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>
                     <label for="q" class="required">{{trans 'q'}}</label>
                     <input type="text" id="q" name="q" required="required" value="{{#if current_q }}{{ current_q }}{{/if}}">
                 </p>
                 <p>
-                    <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white">{{trans 'search'}}</button>
+                    <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white">{{trans 'search'}}</button>
                 </p>
             </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <a href="#categories/trendy" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'button.trendy_categories'}}</a>
-                <a href="#categories/excluded" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.excluded_categories'}}</a>
-                <a href="#categories/usedbyfeeds" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'button.categories_usedbyfeeds'}}</a>
-                <a href="#categories/search" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect online">{{trans 'button.search_categories'}}</a>
+            <div class="mdc-card__actions mdc-card--border">
+                <a href="#categories/trendy" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'button.trendy_categories'}}</a>
+                <a href="#categories/excluded" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.excluded_categories'}}</a>
+                <a href="#categories/usedbyfeeds" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'button.categories_usedbyfeeds'}}</a>
+                <a href="#categories/search" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect online">{{trans 'button.search_categories'}}</a>
             </div>
         </form>
     </div>
 </script>
 
 <script type="text/template" id="view-search-items">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="search-items">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="search-items">
         <form action="#items/search/result" method="GET" id="form-search-items">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                 {{#if entries_total }}
                     {{trans 'title.search_items'}} ({{ entries_total }})
                 {{else}}
@@ -141,30 +141,30 @@
                 {{/if}}
                 </h1>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>
                     <label for="q" class="required">{{trans 'q'}}</label>
                     <input type="text" id="q" name="q" required="required" value="{{#if current_q }}{{ current_q }}{{/if}}">
                 </p>
                 <p>
-                    <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white">{{trans 'search'}}</button>
+                    <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white">{{trans 'search'}}</button>
                 </p>
             </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <a href="#items/recent" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'button.recent_items'}}</a>
-                <a href="#items/unread" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.unread_items'}}</a>
-                <a href="#items/starred" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.starred_items'}}</a>
-                <a href="#items/search" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect online">{{trans 'button.search_items'}}</a>
+            <div class="mdc-card__actions mdc-card--border">
+                <a href="#items/recent" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'button.recent_items'}}</a>
+                <a href="#items/unread" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.unread_items'}}</a>
+                <a href="#items/starred" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.starred_items'}}</a>
+                <a href="#items/search" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect online">{{trans 'button.search_items'}}</a>
             </div>
         </form>
     </div>
 </script>
 
 <script type="text/template" id="view-search-authors">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="search-authors">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="search-authors">
         <form action="#authors/search/result" method="GET" id="form-search-authors">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                 {{#if entries_total }}
                     {{trans 'title.search_authors'}} ({{ entries_total }})
                 {{else}}
@@ -172,31 +172,31 @@
                 {{/if}}
                 </h1>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>
                     <label for="q" class="required">{{trans 'q'}}</label>
                     <input type="text" id="q" name="q" required="required" value="{{#if current_q }}{{ current_q }}{{/if}}">
                 </p>
                 <p>
-                    <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white">{{trans 'search'}}</button>
+                    <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white">{{trans 'search'}}</button>
                 </p>
             </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <a href="#authors/trendy" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'button.trendy_authors'}}</a>
-                <a href="#authors/search" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect online">{{trans 'button.search_authors'}}</a>
+            <div class="mdc-card__actions mdc-card--border">
+                <a href="#authors/trendy" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'button.trendy_authors'}}</a>
+                <a href="#authors/search" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect online">{{trans 'button.search_authors'}}</a>
             </div>
         </form>
     </div>
 </script>
 
 <script type="text/template" id="view-status">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="status">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--4-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="status">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 Server
             </h1>
         </div>
-        <div class="mdl-card__supporting-text">
+        <div class="mdc-card__supporting-text">
             <p>
                 <span class="label">{{trans 'SERVER_ADDR'}}</span>
                 {{ _server.SERVER_ADDR }}
@@ -218,13 +218,13 @@
         </div>
     </div>
 
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="status">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--4-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="status">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 Webserver
             </h1>
         </div>
-        <div class="mdl-card__supporting-text">
+        <div class="mdc-card__supporting-text">
             <p>
                 <span class="label">{{trans 'SERVER_SOFTWARE'}}</span>
                 {{ _server.SERVER_SOFTWARE }}
@@ -240,13 +240,13 @@
         </div>
     </div>
 
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="status">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--4-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="status">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 Language
             </h1>
         </div>
-        <div class="mdl-card__supporting-text">
+        <div class="mdc-card__supporting-text">
             <p>
                 <span class="label">{{trans 'php_sapi_name'}}</span>
                 {{ function.php_sapi_name }}
@@ -262,13 +262,13 @@
         </div>
     </div>
 
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="status">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--4-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="status">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 Extensions
             </h1>
         </div>
-        <div class="mdl-card__supporting-text">
+        <div class="mdc-card__supporting-text">
             <p>
                 <span class="label">{{trans 'gmp'}}</span>
                 {{ extension.gmp }}
@@ -296,13 +296,13 @@
         </div>
     </div>
 
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="status">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--4-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="status">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 Database
             </h1>
         </div>
-        <div class="mdl-card__supporting-text">
+        <div class="mdc-card__supporting-text">
             {{# if connection.database }}
                 <p>
                     <span class="label">name</span>
@@ -339,13 +339,13 @@
     {{#if search.enabled }}
         {{#if search.stats.indices }}
             {{#each search.stats.indices as |indice indice_index|}}
-                <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="search-node-{{ node.name }}">
-                    <div class="mdl-card__title">
-                        <h1 class="mdl-card__title-text">
+                <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--4-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="search-node-{{ node.name }}">
+                    <div class="mdc-card__primary">
+                        <h1 class="mdc-card__title">
                             Index (Elastic Search)
                         </h1>
                     </div>
-                    <div class="mdl-card__supporting-text">
+                    <div class="mdc-card__supporting-text">
                         <p>
                             <span class="label">name</span>
                             {{ indice_index }}
@@ -375,13 +375,13 @@
             {{/each}}
         {{/if}}
 
-        <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="search-cluster">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+        <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--4-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="search-cluster">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                     Cluster (Elastic Search)
                 </h1>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdc-card__supporting-text">
                 <p>
                     <span class="label">name</span>
                     {{ search.health.cluster_name }}
@@ -407,13 +407,13 @@
 
         {{#if search.nodes }}
             {{#each search.nodes.nodes as |node node_index|}}
-                <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="search-node-{{ node.name }}">
-                    <div class="mdl-card__title">
-                        <h1 class="mdl-card__title-text">
+                <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--4-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="search-node-{{ node.name }}">
+                    <div class="mdc-card__primary">
+                        <h1 class="mdc-card__title">
                             Node (Elastic Search)
                         </h1>
                     </div>
-                    <div class="mdl-card__supporting-text">
+                    <div class="mdc-card__supporting-text">
                         <p>
                             <span class="label">name</span>
                             {{ node.name }}
@@ -443,25 +443,25 @@
             {{/each}}
         {{/if}}
 
-        <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="search-node-{{ node.name }}">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+        <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--4-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="search-node-{{ node.name }}">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                     Types
                 </h1>
             </div>
-            <div class="mdl-card__supporting-text">
-                <table class="mdl-data-table">
+            <div class="mdc-card__supporting-text">
+                <table class="mdc-data-table">
                     <thead>
                         <tr>
-                        <th class="mdl-data-table__cell--non-numeric mdl-data-table__header--sorted-ascending">Type</th>
-                        <th class="mdl-data-table__cell--non-numeric">Database</th>
-                        <th class="mdl-data-table__cell--non-numeric">Elastic Search</th>
+                        <th class="mdc-data-table__cell--non-numeric mdc-data-table__header--sorted-ascending">Type</th>
+                        <th class="mdc-data-table__cell--non-numeric">Database</th>
+                        <th class="mdc-data-table__cell--non-numeric">Elastic Search</th>
                         </tr>
                     </head>
                     <tbody>
                     {{#each types as |type type_index|}}
                         <tr>
-                        <td class="mdl-data-table__cell--non-numeric">{{ type_index }}</td>
+                        <td class="mdc-data-table__cell--non-numeric">{{ type_index }}</td>
                         <td>{{ type.database }}</td>
                         <td>{{ type.elastic_search }}</td>
                         </tr>

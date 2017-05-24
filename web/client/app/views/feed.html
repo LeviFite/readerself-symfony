@@ -1,8 +1,8 @@
 <script type="text/template" id="view-feeds">
     {{#if entry }}
-        <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="title-entry">
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">
+        <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="title-entry">
+            <div class="mdc-card__primary">
+                <h1 class="mdc-card__title">
                     <a href="#{{ entry_entity }}/{{ entry.id }}" class="load-route">
                         {{ entry.title }} ({{trans entry_entity}})
                     </a>
@@ -11,9 +11,9 @@
         </div>
     {{/if}}
 
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="title-entries">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="title-entries">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 {{#if current_title }}
                     {{trans current_title}} ({{ entries_total }})
                 {{else}}
@@ -21,41 +21,41 @@
                 {{/if}}
             </h1>
         </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a href="#feeds/recent" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'button.recent_feeds'}}</a>
-            <a href="#feeds/subscribed" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.subscribed_feeds'}}</a>
-            <a href="#feeds/unsubscribed" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.unsubscribed_feeds'}}</a>
-            <a href="#feeds/witherrors" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.feeds_witherrors'}}</a>
-            <a href="#feeds/search" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect online">{{trans 'button.search_feeds'}}</a>
+        <div class="mdc-card__actions mdc-card--border">
+            <a href="#feeds/recent" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'button.recent_feeds'}}</a>
+            <a href="#feeds/subscribed" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.subscribed_feeds'}}</a>
+            <a href="#feeds/unsubscribed" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.unsubscribed_feeds'}}</a>
+            <a href="#feeds/witherrors" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.feeds_witherrors'}}</a>
+            <a href="#feeds/search" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect online">{{trans 'button.search_feeds'}}</a>
 
-            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect dialog connected online" id="dialog-add_feed">{{trans 'add'}}</button>
-            <dialog class="mdl-dialog" for="dialog-add_feed">
+            <button type="button" class="mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect dialog connected online" id="dialog-add_feed">{{trans 'add'}}</button>
+            <dialog class="mdc-dialog" for="dialog-add_feed">
                 <form action="#feeds/recent" data-query="/feed" method="POST">
-                    <div class="mdl-dialog__content">
+                    <div class="mdc-dialog__content">
                         <p>
                             <label for="title" class="required">{{trans 'link'}}</label>
                             <input type="url" id="link" name="link" required="required" value="">
                         </p>
                     </div>
-                    <div class="mdl-dialog__actions">
-                        <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white close_submit">{{trans 'add'}}</button>
-                        <a href="#" class="mdl-button close">{{trans 'cancel'}}</a>
+                    <div class="mdc-dialog__actions">
+                        <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white close_submit">{{trans 'add'}}</button>
+                        <a href="#" class="mdc-button close">{{trans 'cancel'}}</a>
                     </div>
                 </form>
             </dialog>
 
-            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect dialog connected online" id="dialog-import_feed">{{trans 'import'}}</button>
-            <dialog class="mdl-dialog" for="dialog-import_feed">
+            <button type="button" class="mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect dialog connected online" id="dialog-import_feed">{{trans 'import'}}</button>
+            <dialog class="mdc-dialog" for="dialog-import_feed">
                 <form action="#feeds/recent" data-query="/feeds/import" method="POST" enctype="multipart/form-data">
-                    <div class="mdl-dialog__content">
+                    <div class="mdc-dialog__content">
                         <p>
                             <label for="file" class="required">{{trans 'opml'}}</label>
                             <input type="file" id="file" name="file" required="required">
                         </p>
                     </div>
-                    <div class="mdl-dialog__actions">
-                        <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white close_submit">{{trans 'import'}}</button>
-                        <a href="#" class="mdl-button close">{{trans 'cancel'}}</a>
+                    <div class="mdc-dialog__actions">
+                        <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white close_submit">{{trans 'import'}}</button>
+                        <a href="#" class="mdc-button close">{{trans 'cancel'}}</a>
                     </div>
                 </form>
             </dialog>
@@ -64,73 +64,73 @@
 </script>
 
 <script type="text/template" id="view-feeds-unit">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="feed-{{ entry.id }}" dir="{{ entry.direction }}">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--3-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone" id="feed-{{ entry.id }}" dir="{{ entry.direction }}">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 <a href="#feed/{{ entry.id }}" class="load-route favicon"{{#if entry.hostname }} style="background-image:url(https://www.google.com/s2/favicons?domain={{ entry.hostname }}&amp;alt=feed);"{{/if}}>
                     {{ entry.title }}
                 </a>
             </h1>
-            <div class="mdl-card__subtitle-text">
-                {{#if entry.score }}<span class="load-route mdl-navigation__link"><i class="material-icons">show_chart</i>{{score entry.score }}</span>{{/if}}
-                {{#if entry.language }}<span class="mdl-navigation__link"><i class="material-icons">language</i>{{ entry.language }}</span>{{/if}}
-                <span class="mdl-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
+            <div class="mdc-card__subtitle">
+                {{#if entry.score }}<span class="load-route mdc-navigation__link"><i class="material-icons">show_chart</i>{{score entry.score }}</span>{{/if}}
+                {{#if entry.language }}<span class="mdc-navigation__link"><i class="material-icons">language</i>{{ entry.language }}</span>{{/if}}
+                <span class="mdc-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
                 {{#if entry.categories }}
                     {{#each entry.categories as |category category_index|}}
-                        <a href="#feeds/category/{{ category.id }}" class="load-route mdl-navigation__link"><i class="material-icons">label</i>{{ category.title }}</a>
+                        <a href="#feeds/category/{{ category.id }}" class="load-route mdc-navigation__link"><i class="material-icons">label</i>{{ category.title }}</a>
                     {{/each}}
                 {{/if}}
             </div>
         </div>
         {{#if entry.description }}
-        <div class="mdl-card__supporting-text">
+        <div class="mdc-card__supporting-text">
             {{ entry.description }}
         </div>
         {{/if}}
-        <div class="mdl-card__actions mdl-card--border">
-            <a href="#authors/feed/{{ entry.id }}" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'title.authors'}}</a>
-            <a href="#items/feed/{{ entry.id }}" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'title.items'}}</a>
+        <div class="mdc-card__actions mdc-card--border">
+            <a href="#authors/feed/{{ entry.id }}" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'title.authors'}}</a>
+            <a href="#items/feed/{{ entry.id }}" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'title.items'}}</a>
             {{#if entry.subscribe }}
-                <a href="#feed/action/subscribe/{{ entry.id }}" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected online">{{trans 'unsubscribe'}}</a>
+                <a href="#feed/action/subscribe/{{ entry.id }}" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected online">{{trans 'unsubscribe'}}</a>
             {{else}}
-                <a href="#feed/action/subscribe/{{ entry.id }}" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected online">{{trans 'subscribe'}}</a>
+                <a href="#feed/action/subscribe/{{ entry.id }}" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected online">{{trans 'subscribe'}}</a>
             {{/if}}
         </div>
     </div>
 </script>
 
 <script type="text/template" id="view-feed-read">
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="feeds">
-        <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="feeds">
+        <div class="mdc-card__primary">
+            <h1 class="mdc-card__title">
                 {{trans 'title.feeds'}}
             </h1>
         </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a href="#feeds/recent" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'button.recent_feeds'}}</a>
-            <a href="#feeds/subscribed" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.subscribed_feeds'}}</a>
-            <a href="#feeds/unsubscribed" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.unsubscribed_feeds'}}</a>
-            <a href="#feeds/witherrors" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected">{{trans 'button.feeds_witherrors'}}</a>
-            <a href="#feeds/search" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect online">{{trans 'button.search_feeds'}}</a>
+        <div class="mdc-card__actions mdc-card--border">
+            <a href="#feeds/recent" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'button.recent_feeds'}}</a>
+            <a href="#feeds/subscribed" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.subscribed_feeds'}}</a>
+            <a href="#feeds/unsubscribed" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.unsubscribed_feeds'}}</a>
+            <a href="#feeds/witherrors" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected">{{trans 'button.feeds_witherrors'}}</a>
+            <a href="#feeds/search" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect online">{{trans 'button.search_feeds'}}</a>
         </div>
     </div>
 
-    <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--12-col" id="feed" dir="{{ entry.direction }}">
-        <div class="mdl-card__title">
-            <h1 class="favicon mdl-card__title-text"{{#if entry.hostname }} style="background-image:url(https://www.google.com/s2/favicons?domain={{ entry.hostname }}&amp;alt=feed);"{{/if}}>
+    <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--span-12" id="feed" dir="{{ entry.direction }}">
+        <div class="mdc-card__primary">
+            <h1 class="favicon mdc-card__title"{{#if entry.hostname }} style="background-image:url(https://www.google.com/s2/favicons?domain={{ entry.hostname }}&amp;alt=feed);"{{/if}}>
                 {{ entry.title }}
             </h1>
-            <div class="mdl-card__subtitle-text">
-                {{#if entry.language }}<span class="mdl-navigation__link"><i class="material-icons">language</i>{{ entry.language }}</span>{{/if}}
-                <span class="mdl-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
+            <div class="mdc-card__subtitle">
+                {{#if entry.language }}<span class="mdc-navigation__link"><i class="material-icons">language</i>{{ entry.language }}</span>{{/if}}
+                <span class="mdc-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ entry.date_created }}"></span></span>
                 {{#if entry.categories }}
                     {{#each entry.categories as |category category_index|}}
-                        <a href="#feeds/category/{{ category.id }}" class="load-route mdl-navigation__link"><i class="material-icons">label</i>{{ category.title }}</a>
+                        <a href="#feeds/category/{{ category.id }}" class="load-route mdc-navigation__link"><i class="material-icons">label</i>{{ category.title }}</a>
                     {{/each}}
                 {{/if}}
             </div>
         </div>
-        <div class="mdl-card__supporting-text">
+        <div class="mdc-card__supporting-text">
             <p>
                 <span class="label">{{trans 'link'}}</span>
                 <a href="{{ entry.link }}" target="_blank">{{ entry.link }}</a>
@@ -152,19 +152,19 @@
             </p>
             {{/if}}
         </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a href="#authors/feed/{{ entry.id }}" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'title.authors'}}</a>
-            <a href="#items/feed/{{ entry.id }}" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{trans 'title.items'}}</a>
+        <div class="mdc-card__actions mdc-card--border">
+            <a href="#authors/feed/{{ entry.id }}" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'title.authors'}}</a>
+            <a href="#items/feed/{{ entry.id }}" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect">{{trans 'title.items'}}</a>
             {{#if entry.subscribe }}
-                <a href="#feed/action/subscribe/{{ entry.id }}" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected online">{{trans 'unsubscribe'}}</a>
+                <a href="#feed/action/subscribe/{{ entry.id }}" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected online">{{trans 'unsubscribe'}}</a>
             {{else}}
-                <a href="#feed/action/subscribe/{{ entry.id }}" class="load-route mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect connected online">{{trans 'subscribe'}}</a>
+                <a href="#feed/action/subscribe/{{ entry.id }}" class="load-route mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect connected online">{{trans 'subscribe'}}</a>
             {{/if}}
 
-            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect dialog online administrator" id="dialog-update-{{ entry.id }}">{{trans 'update'}}</button>
-            <dialog class="mdl-dialog" for="dialog-update-{{ entry.id }}">
+            <button type="button" class="mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect dialog online administrator" id="dialog-update-{{ entry.id }}">{{trans 'update'}}</button>
+            <dialog class="mdc-dialog" for="dialog-update-{{ entry.id }}">
                 <form action="#feed/{{ entry.id }}" data-query="/feed/{{ entry.id }}" method="PUT">
-                    <div class="mdl-dialog__content">
+                    <div class="mdc-dialog__content">
                         <p>
                             <label for="title" class="required">{{trans 'title'}}</label>
                             <input type="text" id="title" name="title" value="{{ entry.title }}">
@@ -182,24 +182,24 @@
                             <input type="text" id="language" name="language" value="{{ entry.language }}">
                         </p>
                     </div>
-                    <div class="mdl-dialog__actions">
-                        <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white close_submit">{{trans 'update'}}</button>
-                        <a href="#" class="mdl-button close">{{trans 'cancel'}}</a>
+                    <div class="mdc-dialog__actions">
+                        <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white close_submit">{{trans 'update'}}</button>
+                        <a href="#" class="mdc-button close">{{trans 'cancel'}}</a>
                     </div>
                 </form>
             </dialog>
 
-            <button type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect dialog online administrator" id="dialog-delete-{{ entry.id }}">{{trans 'delete'}}</button>
-            <dialog class="mdl-dialog" for="dialog-delete-{{ entry.id }}">
+            <button type="button" class="mdc-button mdc-button--colored mdc-js-button mdc-js-ripple-effect dialog online administrator" id="dialog-delete-{{ entry.id }}">{{trans 'delete'}}</button>
+            <dialog class="mdc-dialog" for="dialog-delete-{{ entry.id }}">
                 <form action="#feeds/recent" data-query="/feed/{{ entry.id }}" method="DELETE">
-                    <div class="mdl-dialog__content">
+                    <div class="mdc-dialog__content">
                         <p>
                             {{ entry.title }} ({{trans 'feed'}})
                         </p>
                     </div>
-                    <div class="mdl-dialog__actions">
-                        <button type="submit" class="mdl-button mdl-color--pink mdl-color-text--white close_submit">{{trans 'delete'}}</button>
-                        <a href="#" class="mdl-button close">{{trans 'cancel'}}</a>
+                    <div class="mdc-dialog__actions">
+                        <button type="submit" class="mdc-button mdc-color--pink mdc-color-text--white close_submit">{{trans 'delete'}}</button>
+                        <a href="#" class="mdc-button close">{{trans 'cancel'}}</a>
                     </div>
                 </form>
             </dialog>
@@ -208,13 +208,13 @@
 
     {{#each entry.collections as |collection collection_index|}}
         {{#if collection.error }}
-            <div class="mdl-card mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone connected" id="collection-{{ collection.id }}">
-                <div class="mdl-card__title">
-                    <h1 class="mdl-card__title-text">
+            <div class="mdc-card mdc-shadow--2dp mdc-color--white mdc-layout-grid__cell mdc-layout-grid__cell--6-col mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-12-phone connected" id="collection-{{ collection.id }}">
+                <div class="mdc-card__primary">
+                    <h1 class="mdc-card__title">
                         {{ collection.error }}
                     </h1>
-                    <div class="mdl-card__subtitle-text">
-                        <span class="mdl-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ collection.date_created }}"></span></span>
+                    <div class="mdc-card__subtitle">
+                        <span class="mdc-navigation__link"><i class="material-icons">access_time</i><span class="timeago" data-date="{{ collection.date_created }}"></span></span>
                     </div>
                 </div>
             </div>
