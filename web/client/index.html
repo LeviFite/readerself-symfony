@@ -22,23 +22,62 @@
 <link rel="stylesheet" type="text/css" href="app/core.css">
 </head>
 
-<body class="anonymous online not_administrator no_entries">
+<body class="mdc-typography anonymous online not_administrator no_entries">
 
 <div class="mdc-layout mdc-js-layout mdc-layout--fixed-header mdc-layout--fixed-drawer">
-    <header class="mdc-toolbar">
-        <div class="mdc-toolbar__row">
-            <div class="mdc-layout-spacer">
-            </div>
+    <div class="mdc-toolbar mdc-toolbar--fixed">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <button class="demo-menu material-icons">menu</button>
+          <span class="mdc-toolbar__title catalog-title">Temporary Drawer</span>
+        </section>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+        </section>
+      </div>
+    </div>
 
-            <nav class="mdc-navigation">
-            </nav
-        </div>
-    </header>
 
-    <aside class="mdc-layout__drawer">
-    </aside>
+        <aside class="mdc-temporary-drawer">
+          <nav class="mdc-temporary-drawer__drawer">
+            <header class="mdc-temporary-drawer__header">
+              <div class="mdc-temporary-drawer__header-content mdc-theme--primary-bg mdc-theme--text-primary-on-primary">
+                Header here
+              </div>
+            </header>
+            <nav class="mdc-temporary-drawer__content mdc-list-group">
+              <div id="icon-with-text-demo" class="mdc-list">
+                <a class="mdc-list-item mdc-temporary-drawer--selected" href="#">
+                  <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
+                </a>
+                <a class="mdc-list-item" href="#">
+                  <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
+                </a>
+                <a class="mdc-list-item" href="#">
+                  <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
+                </a>
+                <a class="mdc-list-item" href="#">
+                  <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
+                </a>
+              </div>
 
-    <main class="mdc-layout__content mdc-color--grey-100">
+              <hr class="mdc-list-divider">
+
+              <div class="mdc-list">
+                <a class="mdc-list-item" href="#">
+                  <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
+                </a>
+                <a class="mdc-list-item" href="#">
+                  <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
+                </a>
+                <a class="mdc-list-item" href="#">
+                  <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
+                </a>
+              </div>
+            </nav>
+          </nav>
+        </aside>
+
+    <main class="mdc-toolbar-fixed-adjust mdc-color--grey-100">
         <div class="mdc-snackbar mdc-js-snackbar">
             <div class="mdc-snackbar__text"></div>
             <button type="button" class="mdc-snackbar__action"></button>
@@ -61,6 +100,21 @@
 <script type="text/javascript" src="app/routes.js"></script>
 <script type="text/javascript" src="app/core.js"></script>
 <script type="text/javascript" src="app/shortcuts.js"></script>
+
+<script>
+  var drawerEl = document.querySelector('.mdc-temporary-drawer');
+  var MDCTemporaryDrawer = mdc.drawer.MDCTemporaryDrawer;
+  var drawer = new MDCTemporaryDrawer(drawerEl);
+  document.querySelector('.demo-menu').addEventListener('click', function() {
+    drawer.open = true;
+  });
+  drawerEl.addEventListener('MDCTemporaryDrawer:open', function() {
+    console.log('Received MDCTemporaryDrawer:open');
+  });
+  drawerEl.addEventListener('MDCTemporaryDrawer:close', function() {
+    console.log('Received MDCTemporaryDrawer:close');
+  });
+</script>
 
 </body>
 </html>

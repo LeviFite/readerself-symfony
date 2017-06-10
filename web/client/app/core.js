@@ -454,7 +454,7 @@ function loadRoute(key, parameters) {
 }
 
 function setSnackbar(message) {
-    snackbarContainer.MaterialSnackbar.showSnackbar({message: message, timeout: 1000});
+    //snackbarContainer.MaterialSnackbar.showSnackbar({message: message, timeout: 1000});
 }
 
 function setPositions() {
@@ -537,7 +537,7 @@ $(document).ready(function() {
     window.addEventListener('offline', updateOnlineStatus);
 
     var templateNavigation = getTemplate('view-navigation');
-    $('.mdc-navigation').html(templateNavigation());
+    $('.mdc-toolbar__section--align-end').html(templateNavigation());
 
     var templateAside = getTemplate('view-aside');
     $('.mdc-layout__drawer').html(templateAside());
