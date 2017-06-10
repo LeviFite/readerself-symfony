@@ -540,7 +540,7 @@ $(document).ready(function() {
     $('.mdc-toolbar__section--align-end').html(templateNavigation());
 
     var templateAside = getTemplate('view-aside');
-    $('.mdc-layout__drawer').html(templateAside());
+    $('.mdc-temporary-drawer__content').html(templateAside());
 
     setPositions();
 
